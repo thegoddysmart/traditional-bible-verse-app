@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories - Bible Verse of the Day</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <div class="container">
+        <div class="logo">
+          <i class="fas fa-book-bible"></i>
+          <h1>Bible Verse of the Day</h1>
+        </div>
+        <nav>
+          <ul class="desktop-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+            <li><a href="categories.html" class="active">Categories</a></li>
+          </ul>
+          <button id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+          <button id="mobile-menu-btn" aria-label="Toggle mobile menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+      </div>
+      <div class="mobile-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li><a href="categories.html" class="active">Categories</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="container">
+      <h2 class="page-title">Verse Categories</h2>
+      <div class="category-selector">
+        <button class="category-btn active" data-category="faith">Faith</button>
+        <button class="category-btn" data-category="love">Love</button>
+        <button class="category-btn" data-category="strength">Strength</button>
+        <button class="category-btn" data-category="wisdom">Wisdom</button>
+        <button class="category-btn" data-category="hope">Hope</button>
+      </div>
+
+      <div class="verse-card">
+        <div id="verse-loader" class="loader">
+          <div class="spinner"></div>
+        </div>
+        <div id="verse-content" class="hidden">
+          <p id="verse-text" class="verse-text"></p>
+          <p id="verse-reference" class="verse-reference"></p>
+          <div class="verse-actions">
+            <button id="new-verse-btn" class="btn btn-outline">
+              <i class="fas fa-sync-alt"></i> New Verse
+            </button>
+            <button id="share-btn" class="btn btn-outline">
+              <i class="fas fa-share-alt"></i> Share
+            </button>
+            <button id="favorite-btn" class="btn btn-outline">
+              <i class="far fa-heart"></i> Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p class="tagline">"Daily inspiration from God's Word"</p>
+        <p class="copyright">
+          &copy; <span id="current-year"></span> Bible Verse of the Day | 
+          <a href="#">Privacy Policy</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast">
+    <div class="toast-content">
+      <p id="toast-message"></p>
+    </div>
+  </div>
+
+  <script src="js/categories.js"></script>
+</body>
+</html>
+

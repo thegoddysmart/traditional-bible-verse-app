@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorites - Bible Verse of the Day</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <div class="container">
+        <div class="logo">
+          <i class="fas fa-book-bible"></i>
+          <h1>Bible Verse of the Day</h1>
+        </div>
+        <nav>
+          <ul class="desktop-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="favorites.html" class="active">Favorites</a></li>
+            <li><a href="categories.html">Categories</a></li>
+          </ul>
+          <button id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+          <button id="mobile-menu-btn" aria-label="Toggle mobile menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+      </div>
+      <div class="mobile-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="favorites.html" class="active">Favorites</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="container">
+      <h2 class="page-title">Favorite Verses</h2>
+      <div id="favorites-container">
+        <div id="no-favorites" class="empty-state">
+          <p>You haven't saved any verses yet.</p>
+        </div>
+        <div id="favorites-list"></div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p class="tagline">"Daily inspiration from God's Word"</p>
+        <p class="copyright">
+          &copy; <span id="current-year"></span> Bible Verse of the Day | 
+          <a href="#">Privacy Policy</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast">
+    <div class="toast-content">
+      <p id="toast-message"></p>
+    </div>
+  </div>
+
+  <script src="js/favorites.js"></script>
+</body>
+</html>
+
